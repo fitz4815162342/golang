@@ -1,12 +1,10 @@
 # golang
 Docker image for Go development
 
-#builld image
-
+# builld image
 docker build . -t golang
 
-#run container; persistent folder structure
-
+# run container; persistent folder structure
 #docker context
 
 #--persistent
@@ -18,4 +16,5 @@ docker build . -t golang
 #--------pkg
 
 #--------src
+
 docker run --name golang -v "$(pwd)/persistent/go":/go -it golang /bin/bash
