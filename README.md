@@ -5,17 +5,5 @@ Docker image for Go development
 docker build . -t golang
 
 # run 
-docker run --name golang -v "$(pwd)/persistent/go":/go -it golang /bin/bash
+docker run --name golang -it fitz4815162342/golang /bin/bash
 
-# folder structure for bind volume
-#docker context
-
-#--persistent
-
-#-----go
-
-#--------bin
-
-#--------pkg
-
-#--------src
