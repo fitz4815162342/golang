@@ -2,4 +2,4 @@
 Docker image for Go development
 
 # run 
-docker run --name golang -it fitz4815162342/golang /bin/bash
+docker run --name golang -v go:/'$GOPATH' -ti golang /bin/bash
