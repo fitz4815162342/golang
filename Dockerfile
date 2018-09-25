@@ -1,5 +1,7 @@
 FROM buildpack-deps:stretch-scm
 
+VOLUME golang
+
 # gcc for cgo
 RUN apt-get update && apt-get install -y --no-install-recommends \
 		g++ \
@@ -47,7 +49,7 @@ ENV GOPATH /go
 ENV PATH $GOPATH/bin:/usr/local/go/bin:$PATH
 
 RUN mkdir -p "$GOPATH/src" "$GOPATH/bin" "$GOPATH/pkg" && chmod -R 777 "$GOPATH"
-VOLUME go
+
 WORKDIR $GOPATH
 
 RUN go get golang.org/x/mobile/cmd/gomobile && gomobile init
