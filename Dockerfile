@@ -46,9 +46,9 @@ RUN set -eux; \
 ENV GOPATH /go
 ENV PATH $GOPATH/bin:/usr/local/go/bin:$PATH
 
-RUN mkdir -p "$GOPATH/src" "$GOPATH/src/persistant"  "$GOPATH/bin" "$GOPATH/pkg" && chmod -R 777 "$GOPATH"
+RUN mkdir -p "$GOPATH/src" "$GOPATH/src/persistent"  "$GOPATH/bin" "$GOPATH/pkg" && chmod -R 777 "$GOPATH"
 
-VOLUME go/src/persistant
+VOLUME go/src/persistent
 
 WORKDIR $GOPATH
 
