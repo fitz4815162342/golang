@@ -51,4 +51,4 @@ VOLUME go
 WORKDIR $GOPATH
 
 RUN go get golang.org/x/mobile/cmd/gomobile
-RUN gomobile init
+CMD gomobile init
