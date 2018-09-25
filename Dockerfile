@@ -50,5 +50,4 @@ RUN mkdir -p "$GOPATH/src" "$GOPATH/bin" "$GOPATH/pkg" && chmod -R 777 "$GOPATH"
 VOLUME go
 WORKDIR $GOPATH
 
-RUN go get golang.org/x/mobile/cmd/gomobile
-CMD gomobile init
+RUN go get golang.org/x/mobile/cmd/gomobile && gomobile init
